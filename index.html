@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <style>
+    @keyframes yun{
+    	from{
+    		transform: translateX(20px)
+    	}
+    	to{
+    		transform: translateX(300px)
+    	}
+    }
+    @keyframes yun1{
+        from{
+            transform: translateX(60px)
+        }
+        to{
+            transform: translateX(500px)
+        }
+    }
+    html{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .one{
+        background-image: url('img/b5.jpg');
+    }
+    .tow{
+        background-image: url('img/b3.jpg');
+    }
+    .three{
+        background-image: url('img/b2.jpg');
+    }
+    .four{
+        background-image: url('img/b3.jpg');
+    }
+    .five{
+        background-image: url('img/b5.jpg');
+    }
+	.sky img:nth-of-type(1){
+		width: 150px;
+		animation: yun 2s ease-in-out infinite alternate;
+	}
+    .sky img:nth-of-type(2){
+        width: 200px;
+        animation: yun1 2s ease-in-out infinite alternate;
+    }
+    .cxks,.zt,.ks{
+        
+        float: left;
+        width: 50px;
+        height: 50px; 
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+    .cxks{
+        margin-left: 10px;
+        background-image: url('img/cxks.png');
+    }
+    .zt{
+        background-image: url('img/zt.png');
+    }
+
+    .ks{
+        background-image: url('img/ks.png');
+    }
+    .sm{
+        width: 100px;
+        height: 46px;
+        background-image: url('img/life.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: -68px;
+    }    
+    .sm .life{
+        position: absolute;
+        top: 13px;
+        left: 65px;
+    }
+    .fs{
+        width: 100px;
+        height: 46px;
+        background-image: url('img/fs.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        top: -70px;
+    }    
+    .fs .scroe{
+        position: absolute;
+        top: 13px;
+        left: 65px;
+    }
+    .gq1{
+        position: absolute;
+        top: 20px;
+        left: 140px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .chartEle{
+        width:150px; 
+        height:150px;
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        border-radius: 50%;
+		text-align: center; 
+        font-size: 0;
+		position: absolute;
+    }
+    </style>
+    <body class="one">
+    <div class="but">
+        <div class="zt"></div>
+        <div class="cxks"></div>
+    </div>
+    
+    <div class="sky">
+        <img src="img/1-161019104044.png" alt="">
+    	<img src="img/1-161019104044.png" alt="">
+    </div>
+    <div class="fs"><span class="scroe">00</span></div>
+    <div class="sm"><span class="life">10</span></div>
+    <div class="gq1">关卡：<span class="gq">1</span></div>
+    </body>
+    
+</html>
+<script src="game.js"></script>
+<!-- <script src="zjd.js"></script> -->
+<script>
+	let game=new Game();
+	// console.log(game.cw);
+	console.log(game.scroe);
+	game.start();
+
+</script>
